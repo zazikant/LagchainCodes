@@ -78,6 +78,8 @@ for index, row in df.iterrows():
     
     chat = ChatOpenAI(temperature=0.0)
     
+    format_instructions = parser.get_format_instructions()
+    
     input_variables = {"Search_term": row_values["Search_term"], "Keyword": row_values["Keyword"], "format_instructions": format_instructions}
     
     messages = prompt.format_messages(**input_variables)
