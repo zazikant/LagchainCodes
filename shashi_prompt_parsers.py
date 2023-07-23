@@ -68,6 +68,8 @@ text: {context}
 
 """
 
+#very important to note that the format instructions is the json format that consists of the output key and value pair. It could be multiple key value pairs. All the context with input variables should be written above that in the template.
+
 prompt  = PromptTemplate(
     input_variables=["context", "format_instructions"],
     template=template
