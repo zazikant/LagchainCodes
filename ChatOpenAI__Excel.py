@@ -35,7 +35,7 @@ from langchain.output_parsers import StructuredOutputParser
 
 business_schema = ResponseSchema(
     name="Is_Business_Enquiry_keyword",
-    description="Answer as Yes or No. If the search term relates to translating to a service offering business related enquiry related to the keyword, then return Yes, else return No.",
+    description="Answer as Yes or No If the search term relates to seeking service offering of construction pmc in relevance to keyword.",
 )
 
 response_schemas = [business_schema]
@@ -47,7 +47,6 @@ format_instructions
 
 template = """
 Interprete the search term and keyword and evaluate the text.
-Is_Business_Enquiry_keyword: If the search term relates to translating to a service offering business related enquiry related to the keyword, then return Yes, else return No.
 
 Search_Term: {Search_term}
 Keyword: {Keyword}
@@ -99,4 +98,4 @@ business_term = pd.DataFrame(responses, columns=["Is_Business_Enquiry_keyword"])
 df = pd.concat([df, business_term], axis=1)
 
 # Export dataframe to CSV
-df.to_csv("business_term.csv", index=False)
+df.to_csv("business_term1.csv", index=False)
