@@ -52,11 +52,9 @@ Search_Term: {Search_term}
 Keyword: {Keyword}
 
 Just return the JSON, do not add ANYTHING, NO INTERPRETATION!
-Is_Business_Enquiry_keyword
+{format_instructions}:"""
 
-{format_instructions}
-
-"""
+#imprtant to have the format instructions in the template represented as {format_instructions}:"""
 
 from langchain.prompts import ChatPromptTemplate
 from langchain.chat_models import ChatOpenAI
