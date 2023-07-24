@@ -60,10 +60,9 @@ Interprete the text and evaluate the text.
 sentiment: Is the text positive, neutral or negative? Only provide these words.
 subject: What subject is the text about? Use 2 lines
 
-Just return the JSON, do not add ANYTHING, NO INTERPRETATION!
-
 text: {context}
 
+Just return the JSON, do not add ANYTHING, NO INTERPRETATION!
 {format_instructions}:"""
 
 #imprtant to have the format instructions in the template represented as {format_instructions}:"""
