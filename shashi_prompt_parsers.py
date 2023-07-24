@@ -64,9 +64,9 @@ Just return the JSON, do not add ANYTHING, NO INTERPRETATION!
 
 text: {context}
 
-{format_instructions}
+{format_instructions}:"""
 
-"""
+#imprtant to have the format instructions in the template represented as {format_instructions}:"""
 
 #very important to note that the format instructions is the json format that consists of the output key and value pair. It could be multiple key value pairs. All the context with input variables should be written above that in the template.
 
