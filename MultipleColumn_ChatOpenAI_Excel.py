@@ -144,6 +144,8 @@ for index, row in df.iterrows():
     responses.append(output_dict)
     
 # Create new dataframe from responses list
+
+#very important:"Ensure that you are changing New_data to a new name everytime you add a new column"
 New_data = pd.DataFrame(responses, columns=["Ad_copy"])
 
 # Concatenate the original dataframe with the new dataframe
