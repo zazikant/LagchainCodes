@@ -24,7 +24,7 @@ loader = DirectoryLoader(
 
 documents = loader.load()
 
-#textsplitter-----------------
+#textsplitter-----------------keep large chunk size and miniumum overlap to get new 
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
@@ -51,7 +51,16 @@ import pickle
 
 db = FAISS.from_documents(docs, openai_embeddings)
 
-# vectorstore = FAISS.from_documents(documents, openai_embeddings)
+vectorstore = FAISS.from_documents(documents, openai_embeddings)
+
+import pickle
+
+with open("vectorstore.pkl", "wb") as f:
+    pickle.dump(vectorstore, f)
+    
+with open("vectorstore.pkl", "rb") as f:
+    vectorstore = pickle.load(f)
+
 
 query = "what is mentioned about Laser-assisted gum treatments?"
 docs = db.similarity_search(query, k=4)
