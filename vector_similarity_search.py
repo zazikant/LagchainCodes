@@ -44,14 +44,20 @@ openai_embeddings = OpenAIEmbeddings()
 # from langchain.embeddings import HuggingFaceEmbeddings
 # openai_embeddings = HuggingFaceEmbeddings(model_name="all-mpnet-base-v2")
 
-#loading vectors into vector db-----------------
 
 from langchain.vectorstores.faiss import FAISS
+
 import pickle
+
+#Very important - db below is used by similarity search and not been used for agents
 
 db = FAISS.from_documents(docs, openai_embeddings)
 
+#Very important - vectorstore below is used by agents in tools and not been used for similarity search
+
 vectorstore = FAISS.from_documents(documents, openai_embeddings)
+
+#dump and load the vector store for vector store that is going to be used by agents-----
 
 import pickle
 
@@ -60,7 +66,16 @@ with open("vectorstore.pkl", "wb") as f:
     
 with open("vectorstore.pkl", "rb") as f:
     vectorstore = pickle.load(f)
+    
+#dump and load the vector store for vector store that is going to be used by similarity search-----
 
+import pickle
+
+with open("db.pkl", "wb") as f:
+    pickle.dump(db, f)
+    
+with open("db.pkl", "rb") as f:
+    db = pickle.load(f)
 
 query = "what is mentioned about Laser-assisted gum treatments?"
 docs = db.similarity_search(query, k=4)
