@@ -28,39 +28,33 @@ def generate(input_text, max_new_tokens=500):
 
     print(text)
     
-
-from langchain.chains import LLMChain, SequentialChain
-from langchain.memory import ConversationBufferMemory
-from langchain import HuggingFacePipeline
-from langchain import PromptTemplate,  LLMChain
-
-
-from transformers import AutoModel
-import torch
-import transformers
-from transformers import AutoTokenizer, AutoModelForCausalLM
-
-import json
-import textwrap
-
-
-llm = HuggingFacePipeline(pipeline=generate)
-
+    
+!pip install transformers
+!pip install huggingface_hub
+    
 
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+from langchain.llms import HuggingFacePipeline
 
-# Create a prompt template
+from langchain.prompts import PromptTemplate
+
 prompt = PromptTemplate(
     input_variables=["product"],
     template="What is a good name for a company that makes {product}?",
 )
 
-# Create an LLM chain
-chain = LLMChain(llm=llm, prompt=prompt)
+from transformers import pipeline
+pipeline = pipeline("text-generation", model=model, tokenizer=tokenizer, max_length=256)
 
-# Run the chain with user input
-user_input = "anime umbrellas"
-output = chain.run(user_input)
 
-print(output)
+#below works without error for passing formatted prompt but cannot run without llmchain
+local_llm = HuggingFacePipeline(pipeline=generate(prompt.format(product='colorful socks')))
+
+#or
+
+#local_llm = HuggingFacePipeline(pipeline=generate("write your prompt here"))
+
+
+
+chain = LLMChain(llm=local_llm, prompt=prompt, output_key='shashi')
