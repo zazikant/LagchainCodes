@@ -1,5 +1,7 @@
 #GGUF
 
+#https://github.com/marella/ctransformers
+
 !pip install ctransformers
 !pip install ctransformers[cuda]
 !pip install langchain
@@ -15,10 +17,12 @@ llm("write only a code for scrapy crawl type spider to scrape urls using a text 
 
 #GGML
 
-!pip install transformers ctransformers[cuda]
+!pip install ctransformers ctransformers[cuda]
 
 
-from transformers import AutoModelForCausalLM
+from ctransformers import AutoModelForCausalLM
+
+#llm = AutoModelForCausalLM.from_pretrained("marella/gpt-2-ggml", model_file="ggml-model.bin")
 
 llm = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7B-GGML", gpu_layers=50)
 
