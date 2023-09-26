@@ -3,9 +3,6 @@
 
 #Long-Context Understanding (L-CU) is a technique that extends the context length of a language model, such as Qwen-7B-Chat. This is achieved through the use of NTK-aware interpolation and LogN attention scaling. To enable these techniques, set the use_dynamic_ntk and use_logn_attn flags in the config.json file to true. On the VCSUM long-text summary dataset, Qwen-7B-Chat achieved impressive Rouge-L results when using these techniques.
 
-!git clone -b v1.0.8 https://github.com/Dao-AILab/flash-attention
-%cd flash-attention
-!pip install .
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -52,3 +49,10 @@ llm = HuggingFacePipeline(pipeline = pipe, model_kwargs = {'temperature':0.7,'ma
 
 
 llm('write a email for commemoration on founder of company')
+
+
+!git clone -b v1.0.8 https://github.com/Dao-AILab/flash-attention
+%cd flash-attention
+!pip install .
+
+#VERY IMPORTANT: The above code actually runs the flash attention and keeps the app running while the below code is executed. Do not close it
