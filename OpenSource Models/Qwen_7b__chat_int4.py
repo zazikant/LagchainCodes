@@ -10,10 +10,10 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # Note: The default behavior now has injection attack prevention off.
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen-7B-Chat-Int4", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen-14B-Chat-Int4", trust_remote_code=True)
 
 model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen-7B-Chat-Int4",
+    "Qwen/Qwen-14B-Chat-Int4",
     device_map="auto",
     trust_remote_code=True
 ).eval()
@@ -40,7 +40,7 @@ pipe = pipeline("text-generation",
                 model=model,
                 tokenizer= tokenizer,
                 device_map="auto",
-                max_new_tokens = 256,
+                max_new_tokens = 1256,
                 do_sample=True,
                 top_k=30,
                 num_return_sequences=1,
@@ -48,9 +48,9 @@ pipe = pipeline("text-generation",
                 )
 
 
-llm = HuggingFacePipeline(pipeline = pipe, model_kwargs = {'temperature':0.7,'max_length': 256, 'top_k' :30})
+llm = HuggingFacePipeline(pipeline = pipe, model_kwargs = {'temperature':0.7,'max_length': 1256, 'top_k' :30})
 
 
-llm('write a email for commemoration on founder of company')
+llm('write a just a one word answer: which is bigger in size an giraff or dinosaur? \n\n')
 
 
