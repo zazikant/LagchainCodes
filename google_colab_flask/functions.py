@@ -59,14 +59,14 @@ def draft_email(user_input):
 
 
     # # Write the locations to a CSV file
-    with open("/content/colab_pro_app/shashi/locations.csv", "w", newline="") as csvfile:
+    with open("./shashi/locations.csv", "w", newline="") as csvfile:
         fieldnames = ["location_id", "location_name"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for location in locations:
             writer.writerow(location)
             
-    df = pd.read_csv("/content/colab_pro_app/shashi/locations.csv")
+    df = pd.read_csv("./shashi/locations.csv")
 
     sdf = SmartDataframe(df, config={"llm": llm})
 
