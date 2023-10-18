@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "phrasal-concord-401807",
+  "private_key_id": "ab7f0f221d138b92e680888fc35acf76fc34a385",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC15FPjNdziNT/o\nvwzbhTj26+1siM613i1EEnL5A84wVUlWJoGsBu/fSoGP3VInsMiD3e7QkEkY8mJy\n+LZpzvWLTGO+h5TKdeNFRb+YUkwZh/tsuTN45SIH1YkxTzr4o6NL7IsJ1sDq7nRP\nJ7KN7/ekBlJZgZ0LmRrwlazIZifYckVOSUg41ecJwPMEBmgpieIxYCOiVeznX1oA\nvVIsieOyWIrCnzPN3y4dO3O4Dr4mESXKD5f7ubmU2I2eYRpE18xpHN70N7ofTQNQ\nCYPPUzwINHQT1z6GWbfhXX4e92CvHN9tT83Orsdv0KAxTTruiCaCF1vsDX9qUHJU\nI8vX6e0nAgMBAAECggEAAomE+rTheA2lGWfc0+JnroNmTu7Dmg7XfnfBac7PR/ul\n57vmxXxdSTXpWRU4aab8zQtsot/Nso7i/QE8zidduSE00k9i2HDM3ZuroKzOifFM\nelzvpl6P2yBz5vUDeLy+RjdY+Hyp4+e1RfYNoWQ5Be0z+zKkev5vkpk2jUm7gY3k\nequUaWV1DRjb2CHl7ZX48EdlJd2kXRRu/kIcP0SFAb72n+rUNkN4f2d8tGUCLLF1\nzjiIcweEtVuNtJq9UUsQFMdrOXO0UyoXQLLqDWp2wIPdBR6bnqYbWN1KKK7uZpO9\n2AlVNo5FsYKSgKhX5JRP9ING4NypRsQ7xrkI0mPC5QKBgQDeyiLB1+SStnlT4B09\nLUfFeIcU7BgCxTpusvuSP9PQ9PMofLluxV0nNCwZlHvqNK4Fx4CZDx+cHNL7T7fW\nox5tReGpsLgHmdZpyOu5hcO4f7c1jcoueNQ+yFrb888Osv1r7qtJ73PRWdeVJK5+\n/wZueo/gZOtbeNNoAoRqbZTAPQKBgQDRAX86E1DiGhWO5o/Fzaj42oul28dlGcDV\nFJmz9sO31x79rhWGvvJ7WORh92h58rP2a6oEsbXFqlrfIg60teuUe3FY9TOu6ugh\ni10OAqj/LNac2qIFkql1dxxj6inuJkZx7F4QD7o2+alSlLbZjDkWH7vtLw0BbPtT\nI/uj2hc1MwKBgBr7PgRd4ifGg6Ed1kyvbC7FLw7gnPPQ8QexE3id1EhNMhmoKUj6\nDBMQZXrfmbY+lQjMJY3j3/8nGoInIGuVK70uJmtHpLH+9pGvLKU2RwLULNsGhgLk\nzUehOifDOkNceAaXTBVTM6KaD9rXK27j8eJ1Y3FYp4xXcLr6+xBsnwQ9AoGAfS7N\nWiZ5moMPCIE1+b6dhze2zsedXQOYyMdG7FBPl4wEZuLex88UgyaR28+IxwnEGkMQ\nGTGrctH/DYhjkH8ps8xf7m0m4IyYLoc/XAXh3LypaldVFctrLg0CdyGorZhFNzTg\nffQ9j3Hnpaum/RQMmSC2uXAl9QWmXny92rzki5sCgYADp3HW6fCQJca8gJ2kSDZc\nILfF/MHLs2tjo/5nU8by/M4w1si9hlYeB2Y1MfhFoO2rokDEaYGWUXwthlk8kcuH\ncQN6sLxAktMb9D+2WEBIHZp0aw0FWie7Itr40feRoLpcNDt95pyMIOykPGy5iM7B\nlXdT8yYu93QywVlfzlVl9A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "gemslack@phrasal-concord-401807.iam.gserviceaccount.com",
+  "client_id": "117585461350127938938",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gemslack%40phrasal-concord-401807.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
